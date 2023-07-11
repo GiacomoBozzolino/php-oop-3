@@ -3,6 +3,7 @@ class Email extends Comunication{
     private $notification;
     public $print;
     public $attached;
+    public static $led = "yellow";
 
     public function __construct(string $_sender, string $_recipient, string $_message, bool $notification){
         parent::__construct($_sender, $_recipient, $_message);

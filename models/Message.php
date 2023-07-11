@@ -1,6 +1,7 @@
 <?php
     class Message extends Comunication{
         private $notification;
+        public static $led = "green";
 
         public function __construct(string $_sender, string $_recipient, string $_message, bool $notification){
             parent::__construct($_sender, $_recipient, $_message);
@@ -20,7 +21,7 @@
             }
         }
 
-        
+
     }
 
 ?>
