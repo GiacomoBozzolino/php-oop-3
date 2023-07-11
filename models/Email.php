@@ -4,9 +4,10 @@ class Email extends Comunication{
     public $print;
     public $attached;
     public static $led = "yellow";
+    public static $bell = "RING";
 
-    public function __construct(string $_sender, string $_recipient, string $_message, bool $notification){
-        parent::__construct($_sender, $_recipient, $_message);
+    public function __construct(string $_sender,$_title, string $_recipient, string $_message, bool $notification){
+        parent::__construct($_sender,$_title, $_recipient, $_message);
         $this->notification = $notification;
 
     }
@@ -20,13 +21,15 @@ class Email extends Comunication{
             echo $this->sendMessage();
         }
         else {
-            echo "email non inviata";
+             echo"email non inviata";
         }
     }
     // funzione stampa
     public function setPrint () {
         if ($this->print === true ) {
-            echo 'email stampata';
+            echo'email stampata';
+        } else  {
+            echo  "email non stampata";
         }
         
     }
@@ -34,6 +37,8 @@ class Email extends Comunication{
     public function getPrint (){
         return $this->print;
     }
+
+   
 
 }
 
