@@ -12,30 +12,33 @@ class Email extends Comunication{
 
     }
     public function sendMessage(){
-            return "email inviata";
+        $this->notification = "email inviata";
         }
 
     // funzione  rispsota email
     public function setResponse () {
         if ($this->notification === true ) {
-            echo $this->sendMessage();
+             $this->sendMessage();
         }
         else {
-             echo"email non inviata";
+            $this->notification="email non inviata";
         }
     }
     // funzione stampa
     public function setPrint () {
         if ($this->print === true ) {
-            echo'email stampata';
+            $this->print ='email stampata';
         } else  {
-            echo  "email non stampata";
+            $this->print = "email non stampata";
         }
         
     }
 
     public function getPrint (){
         return $this->print;
+    }
+    public function getNotification (){
+        return $this->notification;
     }
 
    

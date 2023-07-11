@@ -12,14 +12,19 @@
         }
 
         public function sendMessage(){
-                return "Hai una nuova notifica";
+            $this->notification = "Hai una nuova notifica";
             }
-
+    
+        // funzione  rispsota email
         public function setResponse () {
             if ($this->notification === true ) {
-                echo $this->sendMessage();
+                 $this->sendMessage();
             }
             
+        }
+
+        public function getNotification (){
+            return $this->notification;
         }
 
         public function click(){

@@ -10,16 +10,21 @@
         }
 
         public function sendMessage(){
-                return "sms letto";
+            $this->notification = "sms letto";
             }
-
+    
+        // funzione  rispsota email
         public function setResponse () {
             if ($this->notification === true ) {
-                echo $this->sendMessage();
+                 $this->sendMessage();
             }
             else {
-                echo "sms non letto";
+                $this->notification="sms non letto";
             }
+        }
+
+        public function getNotification (){
+            return $this->notification;
         }
 
 
