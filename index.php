@@ -47,10 +47,15 @@
     $prova = new Comunication ('Io','tu','ciao');
     var_dump($prova);
 
-    $email = new Email ('Io','tu','ciao amico',false);
+    $email_1 = new Email ('Io','tu','ciao amico',true);
+    $email_1->setResponse(true);
+    
 
-    $email->setResponse(true);
-    var_dump($email);
+    $email_2 = new Email ('Io','tu','ciao amico',false);
+    $email_2->setResponse(true);
+    
+
+
 
   
 
