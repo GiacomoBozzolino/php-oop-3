@@ -1,5 +1,5 @@
 <?php
-    Class Message extends Comunication{
+    Class Push extends Comunication{
         private $notification;
         private $icon;
 

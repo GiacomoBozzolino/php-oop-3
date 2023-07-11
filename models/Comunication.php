@@ -4,7 +4,7 @@
         private $sender;
         private $recipient;
         private $message;
-        public function __construct($sender, $recipient, $message){
+        public function __construct(string $sender, string $recipient, string $message){
             $this->sender = $sender;
             $this->recipient = $recipient;
             $this->message = $message;
